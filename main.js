@@ -53,7 +53,9 @@ class Todo {
 
     this.leftTodosElement = document.getElementById('app__left-todos');
     this.todoContainer = document.getElementById('todo__wrapper');
-    this.todos = JSON.parse(localStorage.getItem('todos')) ?? [];
+
+    const todos = localStorage.getItem('todos');
+    this.todos = todos ? JSON.parse(todos) : [];
 
     this.render();
 
@@ -66,7 +68,8 @@ class Todo {
     const createButtonElement = document.getElementById('todo__create-button');
 
     createButtonElement.previousElementSibling.addEventListener('keydown', (e) => {
-      if (e.keyCode === 13) {
+      console.log(e);
+      if (e.key === 'Enter' && !e.isComposing) {
         this.todos = this.todos.concat({
           id: this.todos.length ? this.todos[this.todos.length - 1].id + 1 : 1,
           text: e.target.value,
