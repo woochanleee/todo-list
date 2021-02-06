@@ -53,19 +53,13 @@ class Todo {
 
     this.leftTodosElement = document.getElementById('app__left-todos');
     this.todoContainer = document.getElementById('todo__wrapper');
-
-    this.todos = [
-      { id: 1, text: '아침 산책', done: false },
-      { id: 2, text: '아침 산책', done: false },
-      { id: 3, text: '아침 산책', done: false },
-      { id: 4, text: '아침 산책', done: true },
-      { id: 5, text: '아침 산책', done: true },
-      { id: 6, text: '아침 산책', done: true },
-      { id: 7, text: '아침 산책', done: true },
-      { id: 8, text: '아침 산책', done: true },
-    ];
+    this.todos = JSON.parse(localStorage.getItem('todos')) ?? [];
 
     this.render();
+
+    window.addEventListener('beforeunload', () => {
+      localStorage.setItem('todos', JSON.stringify(this.todos));
+    });
   }
 
   attachCreateTodoEvent() {
