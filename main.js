@@ -68,7 +68,6 @@ class Todo {
     const createButtonElement = document.getElementById('todo__create-button');
 
     createButtonElement.previousElementSibling.addEventListener('keydown', (e) => {
-      console.log(e);
       if (e.key === 'Enter' && !e.isComposing) {
         this.todos = this.todos.concat({
           id: this.todos.length ? this.todos[this.todos.length - 1].id + 1 : 1,
