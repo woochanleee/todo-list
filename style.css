@@ -1,0 +1,457 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+html,
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: rgb(0, 0, 0);
+  background-color: rgb(25, 24, 29);
+}
+
+#main {
+  box-sizing: border-box;
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#iphone {
+  position: relative;
+  padding: 18px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 52px;
+  background-color: rgb(26, 27, 27);
+  border: 1px solid rgb(61, 61, 61);
+  transition: all 0.5s ease-out 0s;
+}
+
+#iphone__screen {
+  position: relative;
+  width: 375px;
+  height: 850px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 36px;
+}
+
+#iphone__left-buttons {
+  position: absolute;
+  top: 120px;
+  left: -6px;
+}
+
+#iphone__silent-switch {
+  width: 7px;
+  background-color: rgb(43, 43, 44);
+  border-width: 2px 0px 2px 2px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: rgb(15, 15, 15);
+  border-bottom-color: rgb(15, 15, 15);
+  border-left-color: rgb(15, 15, 15);
+  border-image: initial;
+  border-right-style: initial;
+  border-right-color: initial;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  height: 36px;
+}
+
+#iphone__volume-up-button {
+  width: 7px;
+  background-color: rgb(43, 43, 44);
+  border-width: 2px 0px 2px 2px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: rgb(15, 15, 15);
+  border-bottom-color: rgb(15, 15, 15);
+  border-left-color: rgb(15, 15, 15);
+  border-image: initial;
+  border-right-style: initial;
+  border-right-color: initial;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  height: 62px;
+  margin-top: 27px;
+}
+
+#iphone__volume-down-button {
+  width: 7px;
+  background-color: rgb(43, 43, 44);
+  border-width: 2px 0px 2px 2px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: rgb(15, 15, 15);
+  border-bottom-color: rgb(15, 15, 15);
+  border-left-color: rgb(15, 15, 15);
+  border-image: initial;
+  border-right-style: initial;
+  border-right-color: initial;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  height: 62px;
+  margin-top: 7px;
+}
+
+#iphone__right-buttons {
+  position: absolute;
+  top: 182px;
+  right: -6px;
+}
+
+#iphone__power-button {
+  width: 7px;
+  background-color: rgb(43, 43, 44);
+  border-width: 2px 2px 2px 0px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgb(15, 15, 15);
+  border-right-color: rgb(15, 15, 15);
+  border-bottom-color: rgb(15, 15, 15);
+  border-image: initial;
+  border-left-style: initial;
+  border-left-color: initial;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  height: 101px;
+}
+
+#iphone__top {
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: -2px;
+  left: 0px;
+  right: 0px;
+}
+
+#iphone__clock {
+  font-size: 17px;
+  font-weight: bold;
+  height: fit-content;
+  position: absolute;
+  top: 19px;
+  left: 26px;
+}
+
+#iphone__notch {
+  height: 35px;
+  width: 230px;
+  background-color: rgb(26, 27, 27);
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  position: relative;
+}
+
+#iphone__notch::before {
+  content: '';
+  position: absolute;
+  height: 9px;
+  width: 8px;
+  top: 0px;
+  left: -7px;
+  background-image: radial-gradient(circle at 0px 100%, rgba(204, 0, 0, 0) 7px, rgb(26, 27, 27) 8px);
+}
+
+#iphone__notch::after {
+  content: '';
+  position: absolute;
+  height: 9px;
+  width: 8px;
+  top: 0px;
+  right: -7px;
+  background-image: radial-gradient(circle at 100% 100%, rgba(204, 0, 0, 0) 7px, rgb(26, 27, 27) 8px);
+}
+
+#status-bar__container {
+  display: flex;
+  position: absolute;
+  top: 19px;
+  right: -12px;
+  height: 15px;
+  align-items: flex-end;
+  transform: scale(0.59);
+}
+
+#status-bar__cellular-list {
+  display: flex;
+  align-items: flex-end;
+}
+
+#status-bar__cellular-one {
+  background-color: black;
+  width: 4px;
+  margin-right: 3px;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+  height: 4px;
+}
+
+#status-bar__cellular-two {
+  background-color: black;
+  width: 4px;
+  margin-right: 3px;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+  height: 7px;
+}
+
+#status-bar__cellular-three {
+  background-color: black;
+  width: 4px;
+  margin-right: 3px;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+  height: 10px;
+}
+
+#status-bar__cellular-four {
+  background-color: black;
+  width: 4px;
+  margin-right: 3px;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+  height: 14px;
+}
+
+#status-bar__wifi-wrapper {
+  margin-bottom: -18px;
+}
+
+#status-bar__wifi-three {
+  padding: 3px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: black transparent transparent;
+  border-image: initial;
+  border-radius: 30px;
+}
+
+#status-bar__wifi-two {
+  padding: 3px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: black transparent transparent;
+  border-image: initial;
+  border-radius: 30px;
+}
+
+#status-bar__wifi-one {
+  padding: 0;
+  border-width: 4px;
+  border-style: solid;
+  border-color: black transparent transparent;
+  border-image: initial;
+  border-radius: 30px;
+}
+
+#status-bar__battery-wrapper {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-left: 3px;
+}
+
+#status-bar__battery-outline {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 2px;
+  border-radius: 4px;
+}
+
+#status-bar__battery {
+  background-color: black;
+  width: 36px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+#status-bar__battery-anode {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 7px;
+  width: 2px;
+  margin-left: 2px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+#app {
+  padding-top: 35px;
+  background-color: transparent;
+  border-radius: 36px;
+}
+
+#app__header {
+  padding: 48px 32px 24px;
+  border-bottom: 1px solid rgb(233, 236, 239);
+}
+
+#app__date {
+  margin: 0px;
+  font-size: 36px;
+  color: rgb(52, 58, 64);
+}
+
+#app__day {
+  margin-top: 4px;
+  color: rgb(134, 142, 150);
+  font-size: 21px;
+}
+
+#app__left-todos {
+  color: rgb(32, 201, 151);
+  font-size: 18px;
+  margin-top: 32px;
+  font-weight: bold;
+}
+
+#todo__wrapper {
+  flex: 1 1 0%;
+  padding: 20px 32px 48px;
+  overflow-y: auto;
+  height: 406px;
+}
+
+#todo__item {
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+#todo__item > input {
+  flex: 1;
+  border: none;
+  font-size: 16px;
+}
+
+#todo__item[data-done='true'] > #todo__check-icon {
+  border: 2px solid rgb(56, 217, 169);
+  color: rgb(56, 217, 169);
+}
+
+#todo__item[data-done='true'] > #todo__text {
+  color: lightgray;
+}
+
+#todo__check-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 24px;
+  font-size: 24px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-right: 20px;
+  cursor: pointer;
+  border: 2px solid lightgray;
+  color: lightgray;
+}
+
+#todo__text {
+  font-size: 16px;
+  flex: 1;
+  color: black;
+}
+
+.icon {
+  cursor: pointer;
+  color: lightgray;
+}
+
+#todo__edit-icon:hover {
+  color: black;
+}
+
+#todo__delete-icon {
+  margin-left: 4px;
+}
+
+#todo__delete-icon:hover {
+  color: #ff6b6b;
+}
+
+#todo__create-button {
+  background: rgb(56, 217, 169);
+  z-index: 219;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  font-size: 60px;
+  position: absolute;
+  right: 20px;
+  bottom: 40px;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.125s ease-in 0s;
+}
+
+#todo__create-button.clicked {
+  background: #ff6b6b;
+  transform: rotate(45deg);
+}
+
+#todo__create-button.clicked:hover {
+  background: #ff8787;
+}
+
+#todo__create-button.clicked:active {
+  background: #fa5252;
+}
+
+#todo__create-input {
+  position: absolute;
+  left: 32px;
+  height: 40px;
+  bottom: 60px;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid rgb(222, 226, 230);
+  width: 60%;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+#todo__create-input.hidden {
+  display: none;
+}
+
+#todo__create-button:hover {
+  background: #63e6be;
+}
+
+#todo__create-button:active {
+  background: #20c997;
+}
+
+#iphone__home-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 8px;
+  width: 150px;
+  height: 8px;
+  background-color: rgb(26, 27, 27);
+  border-radius: 24px;
+}
