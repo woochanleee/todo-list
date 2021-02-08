@@ -105,7 +105,7 @@ class Todo {
 
     const days = ['일', '월', '화', '수', '목', '금', '토'];
 
-    dateElement.innerHTML = `${year}년 ${month + 1}월 ${day}일`;
+    dateElement.innerHTML = `${year}년 ${month + 1}월 ${date.getDate()}일`;
     dayElement.innerHTML = `${days[day]}요일`;
   }
 
